@@ -1,0 +1,21 @@
+// Because in most of the cases, I dont use 
+// * { box-sizing: border-box; }
+
+[class^="container-"],
+[class^="container-"] *,
+[class^="col-"],
+[class^="col-"] *,
+[class^="row"],
+[class^="row"] * {
+    box-sizing: border-box;
+}
+
+@include media-breakpoint-up(xl) {
+    .container-fluid {
+        max-width: var(--container-xl);
+    }
+}
+
+.w-container-plus-edge {
+    width: calc( var(--edge) + var(--w-fluid-container));
+}
